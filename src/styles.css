@@ -1,0 +1,24 @@
+
+.contenedor {
+    min-height: 100vh;
+    background-color: rgb(76, 8, 140);
+}
+
+form {
+    background-color: rgb(222, 213, 213);
+    min-width: 300px;
+}
+
+.parrafo{
+    margin-bottom: -1%;
+}
+
+.boton {
+    margin-left: 10%;
+}
+
+.carga {
+    min-height: 100vh;
+    background-color: rgb(76, 8, 140);
+
+}
