@@ -1,10 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../../store/auth"
+import { logout, startLogout } from "../../store/auth"
 
 
 export const JournalPage = () => {
   const {displayName, email} = useSelector(state => state.auth);
   const dispatch = useDispatch();
+
+  const onLogout = () => { 
+    dispatch(startLogout());
+  }
 
   return (
     <>
@@ -16,7 +20,7 @@ export const JournalPage = () => {
           <h6>Su mail es: {email}</h6> 
         </div>
 
-        <button className="btn btn-primary m-2" onClick={() => dispatch(logout())}>Regresar</button>
+        <button className="btn btn-primary m-2" onClick={onLogout}>Regresar</button>
       </div>
     </>
   )

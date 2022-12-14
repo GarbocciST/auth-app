@@ -1,1 +1,1 @@
-# Proyecto de autenticacion Con FireBase React-redux + Vite.
+# Proyecto de autenticacion con FireBase React-redux + Vite.

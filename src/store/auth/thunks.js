@@ -1,4 +1,4 @@
-import { registerUserWithEmailAndPassword, signInUserWithEmailAndPassword, SignInWithGoogle } from '../../firebase/providers';
+import { logoutFirebase, registerUserWithEmailAndPassword, signInUserWithEmailAndPassword, SignInWithGoogle } from '../../firebase/providers';
 import { checkingCredentials, logout, login } from '.';
 
 
@@ -70,3 +70,18 @@ export const startSingInWithEmailPassword = ({email, password}) => {
         }
     }
 } 
+
+
+export const startLogout = () => {
+    return async(dispatch, getState) => {
+        try {
+            
+            await logoutFirebase();
+            dispatch(logout());
+
+
+        } catch (error) {
+            throw new Error('No se puede desloguear el usuario')
+        }
+    }
+}
